@@ -1,0 +1,23 @@
+<% @items.each do |item| %>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="" href="#<%= item.id %>"><%= item.zh_TW %></a>
+        </h4>
+      </div>
+      <div id="<%= item.id %>" class="">
+        <div class="panel-body">
+          <ul>
+            <% 
+              classifications = Classification.where(item_id: item.id)
+              classifications.each do |t| 
+            %>
+                <li><%=link_to t.zh_TW, classification_path(t) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

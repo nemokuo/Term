@@ -1,0 +1,5 @@
+<ul>
+  <% @classifications.each do |t| %>
+      <li><%=link_to t.zh_TW, classification_path(t) %></li>
+  <% end %>
+</ul>

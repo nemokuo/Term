@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Term</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <br>
+    <!-- <div class="jumbotron">
+    <h1>醫學詞彙系統</h1>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div> -->
+
+  <div class="row">
+      
+    
+  <div class="col-md-3">
+    <%= render 'common/sidebar' %> 
+  </div>
+  <div class="col-md-9">
+    <%= yield %>
+  </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
